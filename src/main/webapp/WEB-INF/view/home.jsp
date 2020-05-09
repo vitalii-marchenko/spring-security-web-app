@@ -21,17 +21,19 @@
                 Role(s): <security:authentication property="principal.authorities"></security:authentication>
 
                 <hr>
+                <security:authorize access="hasRole('MANAGER')">
                     <p>
                         <a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
                         (Only for Managers)
                     </p>
+                </security:authorize>
                 <hr>
-
-                <hr>
+                <security:authorize access="hasRole('ADMIN')">
                 <p>
                     <a href="${pageContext.request.contextPath}/system">IT Systems Meeting</a>
                     (Only for Admins)
                 </p>
+                </security:authorize>
                 <hr>
             </p>
         <hr>
