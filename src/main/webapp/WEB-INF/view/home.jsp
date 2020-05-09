@@ -19,6 +19,20 @@
                 <br><br>
 
                 Role(s): <security:authentication property="principal.authorities"></security:authentication>
+
+                <hr>
+                    <p>
+                        <a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+                        (Only for Managers)
+                    </p>
+                <hr>
+
+                <hr>
+                <p>
+                    <a href="${pageContext.request.contextPath}/system">IT Systems Meeting</a>
+                    (Only for Admins)
+                </p>
+                <hr>
             </p>
         <hr>
 
