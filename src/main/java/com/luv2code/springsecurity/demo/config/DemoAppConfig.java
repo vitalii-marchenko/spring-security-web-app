@@ -52,11 +52,12 @@ public class DemoAppConfig {
 
         logger.info(">>>> jdbc.url=" + env.getProperty("jdbc.url"));
         logger.info(">>>> jdbc.user=" + env.getProperty("jdbc.user"));
+        logger.info(">>>> jdbc.password=" + env.getProperty("jdbc.password"));
+        logger.info(">>>> jdbc.driver=" + env.getProperty("jdbc.driver"));
 
         securityDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
-        securityDataSource.setUser(env.getProperty("jdbc.url"));
-        securityDataSource.setPassword(env.getProperty("jdbc.user"));
-        securityDataSource.setJdbcUrl(env.getProperty("jdbc.password"));
+        securityDataSource.setUser(env.getProperty("jdbc.user"));
+        securityDataSource.setPassword(env.getProperty("jdbc.password"));
 
         securityDataSource.setInitialPoolSize(getIntProperty("connection.pool.initialPoolSize"));
         securityDataSource.setMinPoolSize(getIntProperty("connection.pool.minPoolSize"));
